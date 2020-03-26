@@ -1,0 +1,23 @@
+Explanation of Voting Methods
+
+Name:   
+Type:   
+Win Condition:  
+
+Approval Voting: Yes/No: O(n) count: O(1) largest plurality.
+
+Borda Count: Ranked: O(n) sum: O(1) total.
+
+Bucklin Voting: Ranked: O(n*n) ordinal count: O(p) descend ranks until majority.
+
+Ranked Choice (IRV): Ranked: O(n!) ordinal count: eliminate last place until majority.
+
+Schulze SSD: Ranked: O(n*n) pairwise count: O(n^3) strongest pairwise path.
+
+Majority Judgment: Rated (r): O(n*r) cardinal count: O(p) highest median (from middle).
+
+MJ+ aka Rated Bucklin: Rated (r): O(n*r) ordinal count: O(p) descend ranks until majority.
+
+Score/Range: Rated (r): O(n*r) cardinal count: O(n) sum (mean).
+
+STAR: Rated (6): O(6*r) cardinal count: O(n) top two averages, then largest fandom.
