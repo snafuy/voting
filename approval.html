@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Approval Ballot</title>
+    <script type="text/javascript" src="Sortable.js"></script>
+    <link rel="stylesheet" href="voting.css" type="text/css" />
+</head>
+<body>
+    <form>
+    <section>
+        <h3><a href="https://ncase.me/ballot"> Approval Ballot</a></h3>
+		<p>Mark one or more options that you approve of.</p>
+        <div id="ballotApproval">
+            <div><input type="checkbox" name="approval" id="appApp" value="App" /><label for="appApp"> Approval Voting</label></div>
+            <div><input type="checkbox" name="approval" id="appBorda" value="Borda" /><label for="appBorda"> Borda Count</label></div>
+            <div><input type="checkbox" name="approval" id="appBuck" value="Buck" /><label for="appBuck"> Bucklin Voting</label></div>
+            <div><input type="checkbox" name="approval" id="appMaj" value="Maj" /><label for="appMaj"> Majority Judgment</label></div>
+            <div><input type="checkbox" name="approval" id="appPlur" value="Plur" /><label for="appPlur"> Plurality Voting</label></div>
+            <div><input type="checkbox" name="approval" id="appRCV" value="RCV" /><label for="appRCV"> Ranked Choice (IRV)</label></div>
+            <div><input type="checkbox" name="approval" id="appCond" value="Cond" /><label for="appCond"> Schulze Method (Cond)</label></div>
+            <div><input type="checkbox" name="approval" id="appScore" value="Score" /><label for="appScore"> Score/Range Voting</label></div>
+            <div><input type="checkbox" name="approval" id="appSTAR" value="STAR" /><label for="appSTAR"> STAR Voting</label></div>
+        </div>
+        <footer>
+            <input type="reset" />
+        </footer>
+    </section>
+    </form>
+</body>
+</html>

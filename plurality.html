@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plurality Ballot</title>
+    <script type="text/javascript" src="Sortable.js"></script>
+    <link rel="stylesheet" href="voting.css" type="text/css" />
+</head>
+<body>
+    <form>
+    <section>
+        <h3><a href="https://ncase.me/ballot"> Plurality Ballot (US)</a></h3>
+		<p>Mark one preferred option.</p>
+        <div class="more"><input type="radio" name="ballotPlur" id="plur1" value="p1" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
+        <div class="more"><input type="radio" name="ballotPlur" id="plur2" value="p2" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
+        <div class="more"><input type="radio" name="ballotPlur" id="plur3" value="p3" /><label for="plur3"> Condorcet Voting<br />(with Smith Set runoff)</label></div>
+        <div class="more"><input type="radio" name="ballotPlur" id="plur4" value="p4" /><label for="plur4"> Random Dictator<br /></label></div>       
+        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW">Write-in:<input type="text" class="writein" /></label></div>
+    <footer>
+        <input type="reset" />
+    </footer>
+    </section>
+    </form>
+</body>
+</html>
