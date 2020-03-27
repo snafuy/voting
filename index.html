@@ -24,7 +24,7 @@
             <div><input type="checkbox" name="approval" id="appRCV" value="RCV" /><label for="appRCV"> Ranked Choice (IRV)</label></div>
             <div><input type="checkbox" name="approval" id="appScore" value="Score" /><label for="appScore"> Score/Range Voting</label></div>
             <div><input type="checkbox" name="approval" id="appSTAR" value="STAR" /><label for="appSTAR"> STAR Voting</label></div>
-            <div><input type="checkbox" name="approval" id="appWrite" value="Write" /><label for="appWrite"> Write-in:<input type="text" name="bAWI" id="bAWI" class="writein" /></label></div>
+            <div class="row"><input type="checkbox" name="approval" id="appWrite" value="Write" /><label for="appWrite"> <span>Write-in:</span><input type="text" name="bAWI" id="bAWI" class="writein" /></label></div>
         </div>
     </section>
     <section>
@@ -34,7 +34,7 @@
         <div class="more"><input type="radio" name="ballotPlur" id="plur2" value="p2" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
         <div class="more"><input type="radio" name="ballotPlur" id="plur3" value="p3" /><label for="plur3"> Schulze/SSD Voting<br />(a Condorcet method)</label></div>
         <div class="more"><input type="radio" name="ballotPlur" id="plur4" value="p4" /><label for="plur4"> Random Lottery<br /></label></div>       
-        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW">Write-in:<input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
+        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW"> <span>Write-in:</span><input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
     </section>
     <section>
         <h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
@@ -48,7 +48,7 @@
             <li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
             <li draggable="true" id="rankedScore"> Score/Range Voting</li>
             <li draggable="true" id="rankedSTAR"> STAR Voting</li>
-            <li draggable="true" id="rankedWrite"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
+            <li draggable="true" id="rankedWrite" class="row"> <span>Write-in:</span><input type="text" name="bNWI" id="bNWI" class="writein" /></li>
         </ol>
         <script type="text/javascript">
             new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
@@ -66,7 +66,7 @@
             <div><select name="rangeRCV"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Ranked Choice (IRV)</div>
             <div><select name="rangeScore"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Score/Range Voting</div>
             <div><select name="rangeSTAR"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> STAR Voting</div>
-            <div><select name="rangeWrite"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> WI:<input type="text" name="bTWI" id="bTWI" class="writein" /></div>
+            <div class="row"><select name="rangeWrite"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> <span>WI:</span><input type="text" name="bTWI" id="bTWI" class="writein" /></div>
         </div>
     </section>
 <!--    <section>
