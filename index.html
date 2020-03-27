@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Voting Vote</title>
-    <script type="text/javascript" src="Sortable.js"></script>
     <link rel="stylesheet" href="voting.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
     <header>
@@ -37,6 +37,7 @@
         <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW"> <span>Write-in:</span><input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
     </section>
     <section>
+        <script type="text/javascript" src="Sortable.js"></script>
         <h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
         <ol id="ballotRanked" ondragstart="">
