@@ -20,5 +20,5 @@ section div { min-height: 1.33rem; }
 section.wider { width: 16rem; }
 select { color:#cc6600; }
 .writein { font: smaller cursive; border: none; border-bottom: thin #888888 solid; width: 7rem; }
-li .writein { width: 8rem; }
+li .writein { width: 7.7rem; }
 .dragging { background-color: lightblue; }
