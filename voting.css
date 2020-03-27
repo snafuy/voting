@@ -18,6 +18,6 @@ section { display: inline-block; width:14rem; min-height: 18rem; margin: .4rem .
 section div { min-height: 1.33rem; }
 section.wider { width: 15rem; }
 select { color:#cc6600; }
-.writein { font: smaller cursive; border: none; border-bottom: thin #777777 solid; width: 50%; }
+.writein { font: smaller cursive; border: none; border-bottom: thin #888888 solid; width: 50%; }
 li .writein { width: 65%; }
 .blue-back { background-color: lightblue; }
