@@ -13,19 +13,19 @@
 		<p>Arrange the options in order with your favorite at the top.</p>
         <ol id="ballotRanked" ondragstart="">
             <li draggable="true" id="rankedApp"> Approval Voting</li>
-            <li draggable="true" id="rankedBorda"> Borda Count</li>
-            <li draggable="true" id="rankedBuck"> Bucklin Voting</li>
+            <li draggable="true" id="rankedBor"> Borda Count</li>
+            <li draggable="true" id="rankedBuc"> Bucklin Voting</li>
             <li draggable="true" id="rankedMaj"> Majority Judgment</li>
-            <li draggable="true" id="rankedPlur"> Plurality Voting</li>
+            <li draggable="true" id="rankedPlu"> Plurality Voting</li>
             <li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
-            <li draggable="true" id="rankedScore"> Score/Range Voting</li>
+            <li draggable="true" id="rankedSco"> Score/Range Voting</li>
             <li draggable="true" id="rankedSTAR"> STAR Voting</li>
-            <li draggable="true" id="rankedWrite" class="row"> <span>Write-in:</span><input type="text" name="bNWI" id="bNWI" class="writein" /></li>
+            <li draggable="true" id="rankedWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
         </ol>
+    </section>
     <footer>
         <input type="reset" />
     </footer>
-    </section>
     </form>
     <script type="text/javascript">
         new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
