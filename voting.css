@@ -1,5 +1,5 @@
 * { margin-top: 0; }
-body { margin: 1rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; vertical-align: text-top; }
+body { margin: 1rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; vertical-align: text-top; width: fit-content; max-width: max-content; }
 em { color: #009900; }
 a { text-decoration: none; color: inherit; }
 a:hover { text-decoration: underline ;}

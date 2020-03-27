@@ -11,9 +11,9 @@
         <h2><a href="https://ncase.me/ballot"> A <em> Meta</em> Analysis</a></h2>
     </header>
     <form>
-    <div> The following forms don't do anything (yet). They're just here to demonstrate the kinds of different ballots that can exist, and the different methods to decide the winner. </div>
+    <div> These forms don't do anything (yet). They demonstrate the kinds of different ballots that can exist, using voting methods as the candidates. </div>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Approval Ballot</a></h3>
+        <h3><a href="approval.html" target="pup"> Approval Ballot</a></h3>
 		<p>Mark one or more options that you approve of.</p>
         <div id="ballotApproval">
             <div><input type="checkbox" name="approval" id="appApp" value="App" /><label for="appApp"> Approval Voting</label></div>
@@ -22,22 +22,22 @@
             <div><input type="checkbox" name="approval" id="appMaj" value="Maj" /><label for="appMaj"> Majority Judgment</label></div>
             <div><input type="checkbox" name="approval" id="appPlur" value="Plur" /><label for="appPlur"> Plurality Voting</label></div>
             <div><input type="checkbox" name="approval" id="appRCV" value="RCV" /><label for="appRCV"> Ranked Choice (IRV)</label></div>
-            <div><input type="checkbox" name="approval" id="appCond" value="Cond" /><label for="appCond"> Schulze Method (Cond)</label></div>
             <div><input type="checkbox" name="approval" id="appScore" value="Score" /><label for="appScore"> Score/Range Voting</label></div>
             <div><input type="checkbox" name="approval" id="appSTAR" value="STAR" /><label for="appSTAR"> STAR Voting</label></div>
+            <div><input type="checkbox" name="approval" id="appWrite" value="Write" /><label for="appWrite"> Write-in:<input type="text" name="bAWI" id="bAWI" class="writein" /></label></div>
         </div>
     </section>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Plurality Ballot (US)</a></h3>
+        <h3><a href="plurality.html" target="pup"> Plurality Ballot (US)</a></h3>
 		<p>Mark one preferred option.</p>
         <div class="more"><input type="radio" name="ballotPlur" id="plur1" value="p1" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
         <div class="more"><input type="radio" name="ballotPlur" id="plur2" value="p2" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
-        <div class="more"><input type="radio" name="ballotPlur" id="plur3" value="p3" /><label for="plur3"> Condorcet Voting<br />(with Smith Set runoff)</label></div>
+        <div class="more"><input type="radio" name="ballotPlur" id="plur3" value="p3" /><label for="plur3"> Schulze/SSD Voting<br />(a Condorcet method)</label></div>
         <div class="more"><input type="radio" name="ballotPlur" id="plur4" value="p4" /><label for="plur4"> Random Lottery<br /></label></div>       
-        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW">Write-in:<input type="text" class="writein" /></label></div>
+        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" /><label for="plurW">Write-in:<input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
     </section>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Ranked Ballot</a></h3>
+        <h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
         <ol id="ballotRanked" ondragstart="">
             <li draggable="true" id="rankedApp"> Approval Voting</li>
@@ -46,13 +46,16 @@
             <li draggable="true" id="rankedMaj"> Majority Judgment</li>
             <li draggable="true" id="rankedPlur"> Plurality Voting</li>
             <li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
-            <li draggable="true" id="rankedCond"> Schulze Method (Cond)</li>
             <li draggable="true" id="rankedScore"> Score/Range Voting</li>
             <li draggable="true" id="rankedSTAR"> STAR Voting</li>
+            <li draggable="true" id="rankedWrite"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
         </ol>
-    </section>
+        <script type="text/javascript">
+            new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
+        </script>
+        </section>
     <section class="wider">
-        <h3><a href="https://ncase.me/ballot"> Rated Ballot</a></h3>
+        <h3><a href="rated.html" target="pup"> Rated Ballot</a></h3>
 		<p>Rate each option from 0 stars (worst) to 5 stars (best).</p>
         <div id="ballotSomething">
             <div><select name="rangeApp"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Approval Voting</div>
@@ -60,13 +63,13 @@
             <div><select name="rangeBuck"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Bucklin Voting</div>
             <div><select name="rangeMaj"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Majority Judgment</div>
             <div><select name="rangePlur"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Plurality Voting</div>
-            <div><select name="rangeRCV"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Ranked Choice</div>
-            <div><select name="rangeCond"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Schulze Method</div>
+            <div><select name="rangeRCV"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Ranked Choice (IRV)</div>
             <div><select name="rangeScore"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> Score/Range Voting</div>
             <div><select name="rangeSTAR"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> STAR Voting</div>
+            <div><select name="rangeWrite"> <option value="5">★★★★★</option> <option value="4">★★★★☆</option> <option value="3">★★★☆☆</option> <option value="2">★★☆☆☆</option> <option value="1">★☆☆☆☆</option> <option value="0" selected>☆☆☆☆☆</option></select> WI:<input type="text" name="bTWI" id="bTWI" class="writein" /></div>
         </div>
     </section>
-    <section>
+<!--    <section>
         <h3><a href="https://ncase.me/ballot"> Borda Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
         <ol id="ballotBorda" ondragstart="" reversed start="8">
@@ -80,14 +83,13 @@
             <li draggable="true" id="bordaScore"> Score/Range Voting</li>
             <li draggable="true" id="bordaSTAR"> STAR Voting</li>
         </ol>
-    </section>
+    <script type="text/javascript">
+        new Sortable(ballotBorda, { animation:150, ghostClass:'blue-back' });
+    </script>
+    </section>  -->
     <footer>
         <input type="reset" />
     </footer>
     </form>
-    <script type="text/javascript">
-        new Sortable(ballotBorda, { animation:150, ghostClass:'blue-back' });
-        new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
-    </script>
 </body>
 </html>
