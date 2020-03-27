@@ -16,7 +16,7 @@ div.more { text-indent: -1.5rem; margin: .5rem 1.5rem; font-size: 80%;}
 div.more::first-line { font-size: 125%; }
 section { display: inline-block; width:14rem; min-height: 18rem; margin: .4rem .3rem; border:outset; padding: .5rem; vertical-align: top; }
 section div { min-height: 1.33rem; }
-section.wider { width: 15rem; }
+section.wider { width: 16rem; }
 select { color:#cc6600; }
 .writein { font: smaller cursive; border: none; border-bottom: thin #888888 solid; width: 50%; }
 li .writein { width: 60%; }
