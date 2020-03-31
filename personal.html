@@ -3,36 +3,8 @@
 <head>
     <title>Voting Vote</title>
     <script type="text/javascript" src="Sortable.js"></script>
-    <style type="text/css">
-    * { margin-top: 0; }
-    body { margin: 1rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; vertical-align: text-top; }
-    em { color: #009900; }
-    a { text-decoration: none; color: inherit; }
-    a:hover { text-decoration: underline ;}
-    header, footer { text-align: center; }
-    header * { margin-bottom: 0; }
-	p { font-family: serif; font-style: italic; font-size: .9rem; }
-    ol { padding-left: 1.33rem; }
-    li { border: thin inset; padding-left: .16rem; margin-bottom: .25rem; max-height: 1.02rem; vertical-align: middle; cursor:grab; }
-    label { opacity: 75%; white-space: nowrap; }
-    input:checked + label { opacity: 100%; }
-    label input { opacity: 66%; }
-    input:checked + label input { opacity: 100%; }
-    div.more { text-indent: -1.5rem; margin: .5rem 1.5rem; font-size: 80%;}
-    div.more::first-line { font-size: 125%; }
-    section { display: inline-block; width:14rem; min-height: 18rem; margin: .4rem .3rem; border:outset; padding: .5rem; vertical-align: top; }
-    section div { min-height: 1.33rem; }
-    section.wider { width: 15rem; }
-    select { color:#cc6600; }
-    .writein { font: smaller cursive; width: 100%; border: none; border-bottom: thin black solid; width: 50%; }
-    .star5::before { content: "★★★★★"; }
-    .star4::before { content: "★★★★☆"; }
-    .star3::before { content: "★★★☆☆"; }
-    .star2::before { content: "★★☆☆☆"; }
-    .star1::before { content: "★☆☆☆☆"; }
-    .star0::before { content: "☆☆☆☆☆"; }
-    .blue-back { background-color: lightblue; }
-    </style>
+    <link rel="stylesheet" href="voting.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.2" />
 </head>
 <body>
     <header>
@@ -41,7 +13,7 @@
     </header>
     <form>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Approval Ballot</a></h3>
+        <h3><a href="approval.html" target="pup"> Approval Ballot</a></h3>
 		<p>Mark one or more options that you approve of.</p>
         <div id="ballotApproval">
             <div><input type="checkbox" name="approval" id="appApp" value="App" checked /><label for="appApp"> Approval Voting</label></div>
@@ -56,21 +28,22 @@
         </div>
     </section>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Plurality Ballot (US)</a></h3>
+        <h3><a href="plurality.html" target="pup"> Plurality Ballot</a></h3>
 		<p>Mark one preferred option.</p>
-        <div class="more"><input type="radio" name="ballotPlur" id="plur1" value="p1" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
-        <div class="more"><input type="radio" name="ballotPlur" id="plur2" value="p2" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
-        <div class="row"><input type="radio" name="ballotPlur" id="plurW" value="pW" checked /><label for="plurW">Write-in:<input type="text" class="writein" value="Approval Voting" /></label></div>
+        <div class="more"><input type="radio" name="ballotPlu" id="plur1" value="pKan" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
+        <div class="more"><input type="radio" name="ballotPlu" id="plur2" value="pKod" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
+        <div class="more"><input type="radio" name="ballotPlu" id="plur4" value="pRan" /><label for="plur4"> Random Lottery<br /> &nbsp; </label></div>       
+        <div class="row"><input type="radio" name="ballotPlu" id="plurW" value="pW" checked /><label for="plurW">Write-in:<input type="text" class="writein" value="Approval Voting" /></label></div>
     </section>
     <section>
-        <h3><a href="https://ncase.me/ballot"> Ranked Ballot</a></h3>
+        <h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
         <ol id="ballotRanked" ondragstart="">
             <li draggable="true" id="rankedApp"> Approval Voting</li>
-            <li draggable="true" id="rankedMaj"> Majority Judgment</li>
             <li draggable="true" id="rankedScore"> Score/Range Voting</li>
-            <li draggable="true" id="rankedBuck"> Bucklin Voting</li>
             <li draggable="true" id="rankedSTAR"> STAR Voting</li>
+            <li draggable="true" id="rankedMaj"> Majority Judgment</li>
+            <li draggable="true" id="rankedBuck"> Bucklin Voting</li>
             <li draggable="true" id="rankedBorda"> Borda Count</li>
             <li draggable="true" id="rankedCond"> Schulze Method (Cond)</li>
             <li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
@@ -78,41 +51,25 @@
         </ol>
     </section>
     <section class="wider">
-        <h3><a href="https://ncase.me/ballot"> Rated Ballot</a></h3>
+        <h3><a href="rated.html" target="pup"> Rated Ballot</a></h3>
 		<p>Rate each option from 0 stars (worst) to 5 stars (best).</p>
         <div id="ballotSomething">
             <div><select name="rangeApp"> <option selected>★★★★★</option> <option>★★★★☆</option> <option>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Approval Voting</div>
             <div><select name="rangeBorda"> <option>★★★★★</option> <option>★★★★☆</option> <option selected>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Borda Count</div>
             <div><select name="rangeBuck"> <option>★★★★★</option> <option>★★★★☆</option> <option selected>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Bucklin Voting</div>
-            <div><select name="rangeMaj"> <option>★★★★★</option> <option selected>★★★★☆</option> <option>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Majority Judgment</div>
+            <div><select name="rangeMaj"> <option>★★★★★</option> <option>★★★★☆</option> <option selected>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Majority Judgment</div>
             <div><select name="rangePlur"> <option>★★★★★</option> <option>★★★★☆</option> <option>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option selected>☆☆☆☆☆</option></select> Plurality Voting</div>
             <div><select name="rangeRCV"> <option>★★★★★</option> <option>★★★★☆</option> <option>★★★☆☆</option> <option selected>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Ranked Choice</div>
             <div><select name="rangeCond"> <option>★★★★★</option> <option>★★★★☆</option> <option>★★★☆☆</option> <option selected>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Schulze Method</div>
             <div><select name="rangeScore"> <option>★★★★★</option> <option selected>★★★★☆</option> <option>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> Score/Range Voting</div>
-            <div><select name="rangeSTAR"> <option>★★★★★</option> <option>★★★★☆</option> <option selected>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> STAR Voting</div>
+            <div><select name="rangeSTAR"> <option>★★★★★</option> <option selected>★★★★☆</option> <option>★★★☆☆</option> <option>★★☆☆☆</option> <option>★☆☆☆☆</option> <option>☆☆☆☆☆</option></select> STAR Voting</div>
         </div>
-    </section>
-    <section>
-        <h3><a href="https://ncase.me/ballot"> Borda Ballot</a></h3>
-		<p>Arrange the options in order with your favorite at the top.</p>
-        <ol id="ballotBorda" ondragstart="" reversed start="8">
-            <li draggable="true" id="bordaApp"> Approval Voting</li>
-            <li draggable="true" id="bordaMaj"> Majority Judgment</li>
-            <li draggable="true" id="bordaScore"> Score/Range Voting</li>
-            <li draggable="true" id="bordaBuck"> Bucklin Voting</li>
-            <li draggable="true" id="bordaSTAR"> STAR Voting</li>
-            <li draggable="true" id="bordaBorda"> Borda Count</li>
-            <li draggable="true" id="bordaRCV"> Ranked Choice (IRV)</li>
-            <li draggable="true" id="bordaCond"> Schulze Method (Cond)</li>
-            <li draggable="true" id="bordaPlur"> Plurality Voting</li>
-        </ol>
     </section>
     <footer>
         <input type="reset" />
     </footer>
     </form>
     <script type="text/javascript">
-        new Sortable(ballotBorda, { animation:150, ghostClass:'blue-back' });
         new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
     </script>
 </body>
