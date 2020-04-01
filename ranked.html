@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ranked Ballot</title>
-    <link rel="stylesheet" href="voting.css" type="text/css" />
-    <meta name="viewport" content="width=240, initial-scale=1.2" />
+	<title>Ranked Ballot</title>
+	<link rel="stylesheet" href="voting.css" />
+	<meta name="viewport" content="width=240, initial-scale=1.2" />
 </head>
 <body>
-    <form>
-    <section>
-        <script type="text/javascript" src="Sortable.js"></script>
-        <h3><a href="https://ncase.me/ballot"> Ranked Ballot</a></h3>
+	<form>
+	<section>
+		<script src="Sortable.js"></script>
+		<h3><a href="https://ncase.me/ballot"> Ranked Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
-        <ol id="ballotRanked" ondragstart="">
-            <li draggable="true" id="rankedApp"> Approval Voting</li>
-            <li draggable="true" id="rankedBor"> Borda Count</li>
-            <li draggable="true" id="rankedBuc"> Bucklin Voting</li>
-            <li draggable="true" id="rankedMaj"> Majority Judgment</li>
-            <li draggable="true" id="rankedPlu"> Plurality Voting</li>
-            <li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
-            <li draggable="true" id="rankedSco"> Score/Range Voting</li>
-            <li draggable="true" id="rankedSTAR"> STAR Voting</li>
-            <li draggable="true" id="rankedWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
-        </ol>
-    </section>
-    <footer>
-        <input type="reset" />
-    </footer>
-    </form>
-    <script type="text/javascript">
-        new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
-    </script>
+		<ol id="ballotRanked" ondragstart="">
+			<li draggable="true" id="rankedApp"> Approval Voting</li>
+			<li draggable="true" id="rankedBor"> Borda Count</li>
+			<li draggable="true" id="rankedBuc"> Bucklin Voting</li>
+			<li draggable="true" id="rankedMaj"> Majority Judgment</li>
+			<li draggable="true" id="rankedPlu"> Plurality Voting</li>
+			<li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
+			<li draggable="true" id="rankedSco"> Score/Range Voting</li>
+			<li draggable="true" id="rankedSTAR"> STAR Voting</li>
+			<li draggable="true" id="rankedWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
+		</ol>
+	</section>
+	<footer>
+		<input type="reset" />
+	</footer>
+	</form>
+	<script>
+		new Sortable(ballotRanked, { animation:150, ghostClass:'blue-back' });
+	</script>
 </body>
 </html>

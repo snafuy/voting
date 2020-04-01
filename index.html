@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Voting Vote</title>
-    <link rel="stylesheet" href="voting.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.2" />
+	<title>Voting Vote</title>
+	<link rel="stylesheet" href="voting.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.2" />
 </head>
 <body>
-    <header>
-        <h1><a href="https://ncase.me/ballot"> How Would You Vote?</a></h1>
-        <h2><a href="https://ncase.me/ballot"> A <em> Meta</em> Analysis</a></h2>
-    </header>
-    <form>
-    <div> These forms don't do anything (yet). They demonstrate the kinds of different ballots that can exist, using voting methods as the candidates. </div>
-    <section>
-        <h3><a href="approval.html" target="pup"> Approval Ballot</a></h3>
+	<header>
+		<a href="https://ncase.me/ballot">
+			<h1> How Would You Vote?</h1>
+			<h2> A <em> Meta</em> Analysis</h2>
+		</a>
+	</header>
+	<form>
+	<div> These forms don't do anything (yet). They demonstrate the kinds of different ballots that can exist, using voting methods as the candidates. </div>
+	<section>
+		<h3><a href="approval.html" target="pup"> Approval Ballot</a></h3>
 		<p>Mark one or more options that you approve of.</p>
-        <div id="ballotApproval">
-            <div><input type="checkbox" name="approval" id="appApp" /><label for="appApp"> Approval Voting</label></div>
-            <div><input type="checkbox" name="approval" id="appBor" /><label for="appBor"> Borda Count</label></div>
-            <div><input type="checkbox" name="approval" id="appBuc" /><label for="appBuc"> Bucklin Voting</label></div>
-            <div><input type="checkbox" name="approval" id="appMaj" /><label for="appMaj"> Majority Judgment</label></div>
-            <div><input type="checkbox" name="approval" id="appPlu" /><label for="appPlu"> Plurality Voting</label></div>
-            <div><input type="checkbox" name="approval" id="appRCV" /><label for="appRCV"> Ranked Choice (IRV)</label></div>
-            <div><input type="checkbox" name="approval" id="appSco" /><label for="appSco"> Score/Range Voting</label></div>
-            <div><input type="checkbox" name="approval" id="appSTAR" /><label for="appSTAR"> STAR Voting</label></div>
-            <div class="row"><input type="checkbox" name="approval" id="appWri" /><label for="appWri"> Write-in:<input type="text" name="bAWI" id="bAWI" class="writein" /></label></div>
-        </div>
-    </section>
-    <section>
-        <h3><a href="plurality.html" target="pup"> Plurality Ballot</a></h3>
+		<div id="ballotApproval">
+			<div><input type="checkbox" name="approval" id="appApp" /><label for="appApp"> Approval Voting</label></div>
+			<div><input type="checkbox" name="approval" id="appBor" /><label for="appBor"> Borda Count</label></div>
+			<div><input type="checkbox" name="approval" id="appBuc" /><label for="appBuc"> Bucklin Voting</label></div>
+			<div><input type="checkbox" name="approval" id="appMaj" /><label for="appMaj"> Majority Judgment</label></div>
+			<div><input type="checkbox" name="approval" id="appPlu" /><label for="appPlu"> Plurality Voting</label></div>
+			<div><input type="checkbox" name="approval" id="appRCV" /><label for="appRCV"> Ranked Choice (IRV)</label></div>
+			<div><input type="checkbox" name="approval" id="appSco" /><label for="appSco"> Score/Range Voting</label></div>
+			<div><input type="checkbox" name="approval" id="appSTAR" /><label for="appSTAR"> STAR Voting</label></div>
+			<div class="row"><input type="checkbox" name="approval" id="appWri" /><label for="appWri"> Write-in:<input type="text" name="bAWI" id="bAWI" class="writein" /></label></div>
+		</div>
+	</section>
+	<section>
+		<h3><a href="plurality.html" target="pup"> Plurality Ballot</a></h3>
 		<p>Mark one preferred option.</p>
-        <div class="more"><input type="radio" name="ballotPlu" id="plur1" value="pKan" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
-        <div class="more"><input type="radio" name="ballotPlu" id="plur2" value="pKod" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
-        <div class="more"><input type="radio" name="ballotPlu" id="plur3" value="pCon" /><label for="plur3"> Condorcet Voting<br />(Schulze/SSD method)</label></div>
-        <div class="more"><input type="radio" name="ballotPlu" id="plur4" value="pRan" /><label for="plur4"> Random Lottery<br /> &nbsp; </label></div>       
-        <div class="row"><input type="radio" name="ballotPlu" id="plurW" value="pWri" /><label for="plurW"> Write-in:<input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
-    </section>
-    <section>
-        <script type="text/javascript" src="Sortable.js"></script>
-        <h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
+		<div class="more"><input type="radio" name="ballotPlu" id="plur1" value="pKan" /><label for="plur1"> Plurality Voting<br />(administered by Kang)</label></div>
+		<div class="more"><input type="radio" name="ballotPlu" id="plur2" value="pKod" /><label for="plur2"> Plurality Voting<br />(administered by Kodos)</label></div>
+		<div class="more"><input type="radio" name="ballotPlu" id="plur3" value="pCon" /><label for="plur3"> Condorcet Voting<br />(Schulze/SSD method)</label></div>
+		<div class="more"><input type="radio" name="ballotPlu" id="plur4" value="pRan" /><label for="plur4"> Random Lottery<br /> &nbsp; </label></div>       
+		<div class="row"><input type="radio" name="ballotPlu" id="plurW" value="pWri" /><label for="plurW"> Write-in:<input type="text" name="bPWI" id="bPWI" class="writein" /></label></div>
+	</section>
+	<section>
+		<script src="Sortable.js"></script>
+		<h3><a href="ranked.html" target="pup"> Ranked Ballot</a></h3>
 		<p>Arrange the options in order with your favorite at the top.</p>
-        <ol id="ballotRanked" ondragstart="">
-            <li draggable="true" id="rankApp"> Approval Voting</li>
-            <li draggable="true" id="rankBor"> Borda Count</li>
-            <li draggable="true" id="rankBuc"> Bucklin Voting</li>
-            <li draggable="true" id="rankMaj"> Majority Judgment</li>
-            <li draggable="true" id="rankPlu"> Plurality Voting</li>
-            <li draggable="true" id="rankRCV"> Ranked Choice (IRV)</li>
-            <li draggable="true" id="rankSco"> Score/Range Voting</li>
-            <li draggable="true" id="rankSTAR"> STAR Voting</li>
-            <li draggable="true" id="rankWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
-        </ol>
-        <script type="text/javascript">
-            new Sortable(ballotRanked, { animation:150, ghostClass:'dragging' });
-        </script>
-        </section>
-    <section class="wider">
-        <h3><a href="rated.html" target="pup"> Rated Ballot</a></h3>
+		<ol id="ballotRanked" ondragstart="">
+			<li draggable="true" id="rankApp"> Approval Voting</li>
+			<li draggable="true" id="rankBor"> Borda Count</li>
+			<li draggable="true" id="rankBuc"> Bucklin Voting</li>
+			<li draggable="true" id="rankMaj"> Majority Judgment</li>
+			<li draggable="true" id="rankPlu"> Plurality Voting</li>
+			<li draggable="true" id="rankRCV"> Ranked Choice (IRV)</li>
+			<li draggable="true" id="rankSco"> Score/Range Voting</li>
+			<li draggable="true" id="rankSTAR"> STAR Voting</li>
+			<li draggable="true" id="rankWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
+		</ol>
+		<script>
+			new Sortable(ballotRanked, { animation:150, ghostClass:'dragging' });
+		</script>
+		</section>
+	<section class="wider">
+		<h3><a href="rated.html" target="pup"> Rated Ballot</a></h3>
 		<p>Rate each option from 0 stars (worst) to 5 stars (best).</p>
-        <div id="ballotSomething">
-            <div><select name="rateApp"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Approval Voting</div>
-            <div><select name="rateBor"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Borda Count</div>
-            <div><select name="rateBuc"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Bucklin Voting</div>
-            <div><select name="rateMaj"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Majority Judgment</div>
-            <div><select name="ratePlu"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Plurality Voting</div>
-            <div><select name="rateRCV"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Ranked Choice (IRV)</div>
-            <div><select name="rateSco"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Score/Range Voting</div>
-            <div><select name="rateSTAR"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> STAR Voting</div>
-            <div class="row"><select name="rateWri"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> WI:<input type="text" name="bTWI" id="bTWI" class="writein" /></div>
-        </div>
-    </section>
-    <footer>
-        <input type="reset" />
-    </footer>
-    </form>
+		<div id="ballotSomething">
+			<div><select name="rateApp"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Approval Voting</div>
+			<div><select name="rateBor"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Borda Count</div>
+			<div><select name="rateBuc"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Bucklin Voting</div>
+			<div><select name="rateMaj"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Majority Judgment</div>
+			<div><select name="ratePlu"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Plurality Voting</div>
+			<div><select name="rateRCV"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Ranked Choice (IRV)</div>
+			<div><select name="rateSco"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> Score/Range Voting</div>
+			<div><select name="rateSTAR"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> STAR Voting</div>
+			<div class="row"><select name="rateWri"> <option value=5>★★★★★</option> <option value=4>★★★★☆</option> <option value=3>★★★☆☆</option> <option value=2>★★☆☆☆</option> <option value=1>★☆☆☆☆</option> <option value=0 selected>☆☆☆☆☆</option></select> WI:<input type="text" name="bTWI" id="bTWI" class="writein" /></div>
+		</div>
+	</section>
+	<footer>
+		<input type="reset" />
+	</footer>
+	</form>
 </body>
 </html>
