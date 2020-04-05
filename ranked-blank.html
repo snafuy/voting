@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ranked Blank</title>
+	<link rel="stylesheet" href="voting.css" />
+	<meta name="viewport" content="width=240, initial-scale=1.2" />
+</head>
+<body>
+	<form>
+	<section class="wider">
+		<script src="Sortable.js"></script>
+		<h3><a href="ranked.html"> Ranked Blank Ballot</a></h3>
+		<p>Move your desired options into the <strong>Vote</strong> box with your favorite at the top.</p>
+		<div id="ballotRanked" ondragstart="">
+			<fieldset class="box-yes">
+				<legend>Vote</legend>
+				<ol id="rank1" ondragstart="">
+					
+				</ol>
+			</fieldset>
+			<fieldset class="box-no">
+				<legend>Not Chosen</legend>
+				<ol class="nolist" id="rank0" ondragstart="">
+					<li draggable="true" id="rankedApp"> Approval Voting</li>
+					<li draggable="true" id="rankedBor"> Borda Count</li>
+					<li draggable="true" id="rankedBuc"> Bucklin Voting</li>
+					<li draggable="true" id="rankedMaj"> Majority Judgment</li>
+					<li draggable="true" id="rankedPlu"> Plurality Voting</li>
+					<li draggable="true" id="rankedRCV"> Ranked Choice (IRV)</li>
+					<li draggable="true" id="rankedSco"> Score/Range Voting</li>
+					<li draggable="true" id="rankedSTAR"> STAR Voting</li>
+					<li draggable="true" id="rankedWri" class="row"> Write-in:<input type="text" name="bNWI" id="bNWI" class="writein" /></li>
+				</ol>
+			</fieldset>
+		</div>
+	</section>
+	<footer>
+		<input type="reset" />
+	</footer>
+	</form>
+	<script>
+		new Sortable(rank1, { group: 'shared', animation: 100, ghostClass:'dragging' });
+		new Sortable(rank0, { group: 'shared', animation: 100, ghostClass:'dragging' });
+	</script>
+</body>
+</html>

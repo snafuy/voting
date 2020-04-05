@@ -6,19 +6,23 @@ a:hover { text-decoration: underline ;}
 header, footer { text-align: center; }
 header * { margin-bottom: 0; }
 p { font-family: serif; font-style: italic; font-size: .9rem; }
-ol { padding-left: 1.33rem; }
-li { border: thin inset; padding-left: .16rem; margin-bottom: .25rem; max-height: 1.2rem; vertical-align: middle; cursor:grab; }
-li:hover { border: red thin outset; }
 label { opacity: 75%; white-space: nowrap; }
 input:checked + label { opacity: 100%; }
 label input { opacity: 66%; }
 input:checked + label input { opacity: 100%; }
 div.more { text-indent: -1.5rem; margin: .5rem 1.5rem; font-size: 80%;}
 div.more::first-line { font-size: 125%; }
+fieldset { border: outset lightgray; padding-bottom: 0; }
 section { display: inline-block; width:14rem; min-height: 18rem; margin: .4rem .3rem; border:outset; padding: .5rem; vertical-align: top; }
 section div { min-height: 1.33rem; }
 section.wider { width: 16rem; }
 select { color:#cc6600; }
-.writein { font: smaller cursive; border: none; border-bottom: thin #888888 solid; width: 7rem; }
+ol { padding-left: 1.33rem; min-height: 1rem; }
+li { border: thin inset; padding-left: .16rem; margin-bottom: .25rem; max-height: 1.2rem; vertical-align: middle; cursor:grab; }
+li:hover { border: red thin outset; }
 li .writein { width: 7.5rem; }
+.writein { font: smaller cursive; border: none; border-bottom: thin #888888 solid; width: 7rem; }
 .dragging { background-color: lightblue; }
+.nolist { list-style-type: none; }
+.box-yes { border: outset lightgreen; }
+.row { white-space: nowrap; }
